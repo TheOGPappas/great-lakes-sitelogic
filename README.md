@@ -8,4 +8,4 @@ Marketing website for Great Lakes SiteLogic, LLC — Mid-Michigan civil construc
 
 ## Contact
 
-GreatlakesFieldLogic@outlook.com
+GreatLakesSiteLogic@outlook.com
