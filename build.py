@@ -19,7 +19,7 @@ def page(slug,title,desc,body):
   <meta property="og:image" content="https://greatlakessitelogic.com/assets/logo.png" />
   <meta name="theme-color" content="#0c2340" />
   <title>{title}</title>
-  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/styles.css?v=2" />
 </head>
 <body>
   <nav id="nav"><div class="container navin"><a class="brand" href="/" aria-label="Great Lakes SiteLogic home"><img class="brand-logo" src="/assets/logo.png" width="1697" height="540" alt="Great Lakes SiteLogic" /></a><div class="navlinks" id="navlinks">{links}<a class="{cta_cls}" href="/contact">Contact Us Today</a></div><button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks" onclick="var n=document.getElementById('nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'✕':'☰'">☰</button></div></nav>

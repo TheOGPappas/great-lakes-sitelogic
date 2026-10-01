@@ -53,3 +53,6 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);line-height:1.08;letter-spacing:-.03em;m
  .cards,.contact-cards,.story{grid-template-columns:1fr}
  .page-hero{padding:64px 0 54px}
 }
+.navlinks a.button,.navlinks a.button.active{color:var(--navy)}
+.navlinks a.button.active{box-shadow:inset 0 0 0 2px #fff}
+.contact-card a.big[href^=mailto]{font-size:1.02rem;overflow-wrap:normal;word-break:break-all}
