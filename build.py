@@ -65,6 +65,7 @@ def inline(t):
     t=html.escape(t,quote=False)
     t=re.sub(r"\*\*(.+?)\*\*",r"<strong>\1</strong>",t)
     t=re.sub(r"\[(.+?)\]\((.+?)\)",r'<a href="\2">\1</a>',t)
+    t=t.replace("Mid-Michigan","Mid&#8209;Michigan")
     return t.replace("info@greatlakessitelogic.com",f'<a href="{QUOTE}">{EMAIL}</a>')
 services=[]
 def render(src):
