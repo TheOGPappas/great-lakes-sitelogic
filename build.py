@@ -122,3 +122,13 @@ svc=f'''    <section class="page-hero"><div class="container"><span class="eyebr
 pages["services.html"]=("/services","Services | Great Lakes SiteLogic","Blueprint takeoff, Civil 3D grade-control modeling, machine grade control, survey equipment support, and field mapping &amp; GIS for Michigan contractors.",svc)
 for f,(slug,t,d,b) in pages.items(): open(f,"w").write(page(slug,t,d,b))
 print("built",list(pages))
+
+# sitemap.xml + robots.txt
+import datetime
+BASE="https://greatlakessitelogic.com"
+today=datetime.date.today().isoformat()
+def loc(f): return BASE+("/" if f=="index.html" else "/"+f[:-5])
+pri={"index.html":"1.0","services.html":"0.9","contact.html":"0.8"}
+urls="".join(f"  <url><loc>{loc(f)}</loc><lastmod>{today}</lastmod><priority>{pri.get(f,'0.8' if 'michigan' in f else '0.6')}</priority></url>\n" for f in pages)
+open("sitemap.xml","w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
+open("robots.txt","w").write(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
