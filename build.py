@@ -2,7 +2,9 @@
 import re
 EMAIL="info@greatlakessitelogic.com"; PHONE_T="+19897802592"; PHONE="(989) 780-2592"
 QUOTE=f"mailto:{EMAIL}?subject=Great%20Lakes%20SiteLogic%20Quote%20Request"
-NAV=[("/","Home"),("/about","About"),("/products","Products")]
+NAV=[("/","Home"),("/services","Services"),("/about","About"),("/products","Products")]
+import json,glob,html
+SCHEMA=open("content/schema.json").read().strip()
 def page(slug,title,desc,body):
     links="".join(f'<a href="{h}"{" class=\"active\"" if h==slug else ""}>{t}</a>' for h,t in NAV)
     cta_cls="button active" if slug=="/contact" else "button"
@@ -19,7 +21,8 @@ def page(slug,title,desc,body):
   <meta property="og:image" content="https://greatlakessitelogic.com/assets/logo.png" />
   <meta name="theme-color" content="#0c2340" />
   <title>{title}</title>
-  <link rel="stylesheet" href="/assets/styles.css?v=2" />
+  <link rel="stylesheet" href="/assets/styles.css?v=3" />
+  <script type="application/ld+json">{SCHEMA}</script>
 </head>
 <body>
   <nav id="nav"><div class="container navin"><a class="brand" href="/" aria-label="Great Lakes SiteLogic home"><img class="brand-logo" src="/assets/logo.png" width="1697" height="540" alt="Great Lakes SiteLogic" /></a><div class="navlinks" id="navlinks">{links}<a class="{cta_cls}" href="/contact">Contact Us Today</a></div><button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks" onclick="var n=document.getElementById('nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'✕':'☰'">☰</button></div></nav>
@@ -32,7 +35,7 @@ def page(slug,title,desc,body):
 '''
 CTA=f'''    <section class="cta-band"><div class="container"><div><h2>Ready to talk about your project?</h2><p>Local support in Saginaw, Bay City &amp; Midland. Remote support statewide.</p></div><a class="button navy" href="/contact">Contact Us Today</a></div></section>'''
 
-home=f'''    <section class="hero"><div class="container"><div class="hero-copy"><span class="eyebrow">Mid-Michigan Civil Technology</span><h1>Site technology built <span>from the dirt up.</span></h1><p>Practical field mapping, GIS, grade-control workflows, and construction technology support for teams that need the plan to work where the work happens.</p><div class="hero-actions"><a class="button" href="/products">Explore FieldSight</a><a class="button outline" href="/contact">Contact Us Today</a></div><div class="service-line"><strong>Local support:</strong> Saginaw, Bay City &amp; Midland &nbsp;|&nbsp; <strong>Remote support:</strong> Available statewide across Michigan</div></div></div></section>
+home=f'''    <section class="hero"><div class="container"><div class="hero-copy"><span class="eyebrow">Mid-Michigan Civil Technology</span><h1>Civil Construction Technology &amp; <span>Machine Grade Control in Mid-Michigan</span></h1><p class="tagline">Site technology built from the dirt up.</p><p>Practical field mapping, GIS, grade-control workflows, and construction technology support for teams that need the plan to work where the work happens.</p><div class="hero-actions"><a class="button" href="/products">Explore FieldSight</a><a class="button outline" href="/contact">Contact Us Today</a></div><div class="service-line"><strong>Local support:</strong> Saginaw, Bay City &amp; Midland &nbsp;|&nbsp; <strong>Remote support:</strong> Available statewide across Michigan</div></div></div></section>
     <section><div class="container"><span class="eyebrow">What We Do</span><h2>Field experience, built into every workflow.</h2><p class="lead">Great Lakes SiteLogic is a family-owned, Mid-Michigan company helping contractors and project teams get better information from takeoff through construction.</p><div class="cards"><a class="card" href="/products"><h3>FieldSight</h3><p>A field-mapping and GIS app that puts project data, GNSS positioning, and design references in the hands of the crew on site.</p><span class="more">See the product</span></a><a class="card" href="/about"><h3>Our Experience</h3><p>36 combined years across takeoff, civil consulting, contract reporting, Civil 3D grade-control modeling, and machine control — 16 of them boots in the dirt.</p><span class="more">About us</span></a><a class="card" href="/contact"><h3>Get Support</h3><p>Local service in Saginaw, Bay City, and Midland, with remote support available anywhere in Michigan.</p><span class="more">Contact us today</span></a></div></div></section>
     <section class="dark"><div class="container about-grid"><div><span class="eyebrow">By the numbers</span><h2>Mid-Michigan built. Field-tested.</h2><div class="stats"><div class="stat"><strong>36</strong><span>Combined years of experience</span></div><div class="stat"><strong>16</strong><span>Years of firsthand field experience</span></div></div></div><div><p class="lead">We don't approach models, maps, or workflows as office-only deliverables. Every process is built with the operator, foreman, layout crew, superintendent, and project manager in mind.</p><div class="experience"><div>Blueprint Takeoff</div><div>Civil Consulting</div><div>Civil 3D Grade-Control Modeling</div><div>Machine Grade Control</div><div>Survey Equipment Support</div><div>Field Mapping &amp; GIS</div></div></div></div></section>
 {CTA}'''
@@ -53,9 +56,42 @@ contact=f'''    <section class="page-hero"><div class="container"><span class="e
     <section><div class="container"><div class="contact-cards"><div class="contact-card"><small>Email</small><a class="big" href="mailto:{EMAIL}">{EMAIL}</a><p>Best for quote requests, plans, and project files.</p></div><div class="contact-card"><small>Call or text</small><a class="big" href="tel:{PHONE_T}">{PHONE}</a><p>Talk through your project directly.</p></div><div class="contact-card"><small>Service area</small><span class="big">Saginaw • Bay City • Midland</span><p>Remote support available statewide across Michigan.</p></div></div></div></section>
     <section class="area"><div class="container story"><div><span class="eyebrow">Request a quote</span><h2>What to include in your request.</h2><p class="lead">A few details up front help us give you a faster, more accurate answer.</p><a class="button" style="margin-top:26px" href="{QUOTE}">Email a Quote Request</a></div><ul class="checklist"><li>Project name and location</li><li>Type of work: grade-control modeling, field mapping, FieldSight, or support</li><li>Available files: plans, CAD/DXF, LandXML, surfaces, or control points</li><li>Coordinate system or project datum, if known</li><li>Schedule or needed-by date</li><li>Best phone number to reach you</li></ul></div></section>'''
 
-pages={"index.html":("/","Great Lakes SiteLogic | Civil Construction Technology","Great Lakes SiteLogic provides practical civil construction technology, field mapping, GIS, and grade-control workflow support across Michigan.",home),
+pages={"index.html":("/","Great Lakes SiteLogic | Civil Construction Technology","Civil construction technology for Michigan contractors: grade control, Civil 3D modeling, takeoffs &amp; GIS. Serving Saginaw, Bay City &amp; Midland. Email info@greatlakessitelogic.com.",home),
 "about.html":("/about","About | Great Lakes SiteLogic","Family-owned, Mid-Michigan civil construction technology company with 36 years of combined experience.",about),
 "products.html":("/products","FieldSight | Great Lakes SiteLogic","FieldSight is a field-mapping and GIS app for civil construction crews, layout teams, and project managers.",products),
 "contact.html":("/contact","Contact Us | Great Lakes SiteLogic","Contact Great Lakes SiteLogic for a quote. Serving Saginaw, Bay City, Midland, and remote support statewide.",contact)}
+
+def inline(t):
+    t=html.escape(t,quote=False)
+    t=re.sub(r"\*\*(.+?)\*\*",r"<strong>\1</strong>",t)
+    return t.replace("info@greatlakessitelogic.com",f'<a href="{QUOTE}">{EMAIL}</a>')
+services=[]
+for f in sorted(glob.glob("content/*-page.md")):
+    src=open(f).read()
+    slugv=re.search(r"slug:\*\* `/(.+?)`",src).group(1)
+    mt=re.search(r"Meta title:\*\* (.+)",src).group(1).strip()
+    md=re.search(r"Meta description:\*\* (.+)",src).group(1).strip()
+    name=src.splitlines()[0][2:].strip()
+    body=src.split("---",1)[1].strip().splitlines()
+    h1=body[0][2:]; intro=[];secs=[];cur=None
+    for ln in body[1:]:
+        if ln.startswith("## "): cur={"h":ln[3:],"p":[],"li":[]}; secs.append(cur)
+        elif ln.startswith("- "): cur["li"].append(ln[2:])
+        elif ln.strip(): (cur["p"] if cur else intro).append(ln)
+    out=f'    <section class="page-hero"><div class="container"><span class="eyebrow">Services</span><h1>{inline(h1)}</h1><p>{inline(intro[0])}</p></div></section>\n'
+    out+='    <section><div class="container svc-body">'
+    for i,c in enumerate(secs):
+        last=i==len(secs)-1
+        if last:
+            out+='</div></section>\n    <section class="cta-band"><div class="container"><div><h2>'+inline(c["h"])+'</h2>'+"".join(f"<p>{inline(p)}</p>" for p in c["p"])+f'</div><a class="button navy" href="{QUOTE}">Email Us</a></div></section>'
+        else:
+            out+=f'<div class="svc-sec"><h2>{inline(c["h"])}</h2>'+"".join(f'<p class="lead">{inline(p)}</p>' for p in c["p"])+(('<ul class="checklist">'+"".join(f"<li>{inline(x)}</li>" for x in c["li"])+"</ul>") if c["li"] else "")+"</div>"
+    pages[slugv+".html"]=("/svc:"+slugv,mt,html.escape(md),out)
+    services.append((slugv,name,intro[0]))
+cards="".join(f'<a class="card" href="/{u}"><h3>{html.escape(n)}</h3><p>{html.escape(re.split(r"(?<=\.) ",d)[0])}</p><span class="more">Learn more</span></a>' for u,n,d in services)
+svc=f'''    <section class="page-hero"><div class="container"><span class="eyebrow">Services</span><h1>Civil construction technology <span>services in Mid-Michigan.</span></h1><p>Takeoffs, Civil 3D modeling, machine grade control, survey equipment support, and field mapping for contractors in Saginaw, Bay City, Midland, and statewide.</p></div></section>
+    <section><div class="container"><div class="cards">{cards}</div></div></section>
+{CTA}'''
+pages["services.html"]=("/services","Services | Great Lakes SiteLogic","Blueprint takeoff, Civil 3D grade-control modeling, machine grade control, survey equipment support, and field mapping &amp; GIS for Michigan contractors.",svc)
 for f,(slug,t,d,b) in pages.items(): open(f,"w").write(page(slug,t,d,b))
 print("built",list(pages))

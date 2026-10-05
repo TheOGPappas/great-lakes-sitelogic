@@ -56,3 +56,6 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);line-height:1.08;letter-spacing:-.03em;m
 .navlinks a.button,.navlinks a.button.active{color:var(--navy)}
 .navlinks a.button.active{box-shadow:inset 0 0 0 2px #fff}
 .contact-card a.big[href^=mailto]{font-size:1.02rem;overflow-wrap:normal;word-break:break-all}
+.tagline{font-size:1.15rem;font-weight:700;color:var(--gold);margin:-6px 0 14px}
+.svc-body{max-width:900px}.svc-sec{margin-bottom:46px}.svc-sec h2{margin-bottom:12px}.svc-sec .checklist{margin-top:16px}
+.cta-band a:not(.button){color:inherit;text-decoration:underline}
