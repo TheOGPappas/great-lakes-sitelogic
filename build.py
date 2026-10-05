@@ -21,7 +21,7 @@ def page(slug,title,desc,body):
   <meta property="og:image" content="https://greatlakessitelogic.com/assets/logo.png" />
   <meta name="theme-color" content="#0c2340" />
   <title>{title}</title>
-  <link rel="stylesheet" href="/assets/styles.css?v=3" />
+  <link rel="stylesheet" href="/assets/styles.css?v=4" />
   <script type="application/ld+json">{SCHEMA}</script>
 </head>
 <body>
@@ -64,28 +64,54 @@ pages={"index.html":("/","Great Lakes SiteLogic | Civil Construction Technology"
 def inline(t):
     t=html.escape(t,quote=False)
     t=re.sub(r"\*\*(.+?)\*\*",r"<strong>\1</strong>",t)
+    t=re.sub(r"\[(.+?)\]\((.+?)\)",r'<a href="\2">\1</a>',t)
     return t.replace("info@greatlakessitelogic.com",f'<a href="{QUOTE}">{EMAIL}</a>')
 services=[]
+def render(src):
+    lines=src.split("---",1)[1].strip().splitlines()
+    h1=lines[0][2:]; intro=[];secs=[];cur=None
+    for ln in lines[1:]:
+        if ln.startswith("## "): cur={"h":ln[3:],"b":[]}; secs.append(cur)
+        elif ln.startswith("### "): cur["b"].append(("q",ln[4:]))
+        elif ln.startswith("- "): cur["b"].append(("li",ln[2:]))
+        elif re.match(r"\d+\. ",ln): cur["b"].append(("ol",re.sub(r"^\d+\. ","",ln)))
+        elif ln.strip(): (cur["b"].append(("p",ln)) if cur else intro.append(ln))
+    return h1,intro,secs
+def blocks(b):
+    out="";faq=[];i=0
+    while i<len(b):
+        k,v=b[i]
+        if k in("li","ol"):
+            items=[]
+            while i<len(b) and b[i][0]==k: items.append(b[i][1]); i+=1
+            out+=('<ul class="checklist">'+"".join(f"<li>{inline(x)}</li>" for x in items)+"</ul>") if k=="li" else ('<ol class="steps">'+"".join(f"<li>{inline(x)}</li>" for x in items)+"</ol>")
+            continue
+        if k=="q":
+            a=b[i+1][1] if i+1<len(b) and b[i+1][0]=="p" else ""
+            faq.append((v,a)); out+=f'<details class="faq"><summary>{inline(v)}</summary><p>{inline(a)}</p></details>'; i+=2; continue
+        out+=f'<p class="lead">{inline(v)}</p>'; i+=1
+    return out,faq
+raw=[]
 for f in sorted(glob.glob("content/*-page.md")):
     src=open(f).read()
     slugv=re.search(r"slug:\*\* `/(.+?)`",src).group(1)
+    raw.append((f,src,slugv,src.splitlines()[0][2:].strip()))
+for f,src,slugv,name in raw:
     mt=re.search(r"Meta title:\*\* (.+)",src).group(1).strip()
     md=re.search(r"Meta description:\*\* (.+)",src).group(1).strip()
-    name=src.splitlines()[0][2:].strip()
-    body=src.split("---",1)[1].strip().splitlines()
-    h1=body[0][2:]; intro=[];secs=[];cur=None
-    for ln in body[1:]:
-        if ln.startswith("## "): cur={"h":ln[3:],"p":[],"li":[]}; secs.append(cur)
-        elif ln.startswith("- "): cur["li"].append(ln[2:])
-        elif ln.strip(): (cur["p"] if cur else intro).append(ln)
-    out=f'    <section class="page-hero"><div class="container"><span class="eyebrow">Services</span><h1>{inline(h1)}</h1><p>{inline(intro[0])}</p></div></section>\n'
-    out+='    <section><div class="container svc-body">'
-    for i,c in enumerate(secs):
-        last=i==len(secs)-1
-        if last:
-            out+='</div></section>\n    <section class="cta-band"><div class="container"><div><h2>'+inline(c["h"])+'</h2>'+"".join(f"<p>{inline(p)}</p>" for p in c["p"])+f'</div><a class="button navy" href="{QUOTE}">Email Us</a></div></section>'
-        else:
-            out+=f'<div class="svc-sec"><h2>{inline(c["h"])}</h2>'+"".join(f'<p class="lead">{inline(p)}</p>' for p in c["p"])+(('<ul class="checklist">'+"".join(f"<li>{inline(x)}</li>" for x in c["li"])+"</ul>") if c["li"] else "")+"</div>"
+    h1,intro,secs=render(src)
+    out=f'    <section class="page-hero"><div class="container"><span class="eyebrow">Services</span><h1>{inline(h1)}</h1><p>{inline(intro[0])}</p></div></section>\n    <section><div class="container svc-body">'
+    faqs=[]
+    for c in secs[:-1]:
+        html_b,fq=blocks(c["b"]); faqs+=fq
+        out+=f'<div class="svc-sec"><h2>{inline(c["h"])}</h2>{html_b}</div>'
+    rel="".join(f'<a class="card" href="/{u}"><h3>{html.escape(n)}</h3><span class="more">Learn more</span></a>' for _,_,u,n in raw if u!=slugv)
+    out+=f'</div></section>\n    <section class="area"><div class="container"><span class="eyebrow">Related services</span><h2>More ways we can help.</h2><div class="cards rel">{rel}</div></div></section>'
+    c=secs[-1]
+    out+='\n    <section class="cta-band"><div class="container"><div><h2>'+inline(c["h"])+'</h2>'+"".join(f"<p>{inline(v)}</p>" for k,v in c["b"])+f'</div><a class="button navy" href="{QUOTE}">Email Us</a></div></section>'
+    if faqs:
+        fs={"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]}
+        out+='\n    <script type="application/ld+json">'+json.dumps(fs)+'</script>'
     pages[slugv+".html"]=("/svc:"+slugv,mt,html.escape(md),out)
     services.append((slugv,name,intro[0]))
 cards="".join(f'<a class="card" href="/{u}"><h3>{html.escape(n)}</h3><p>{html.escape(re.split(r"(?<=\.) ",d)[0])}</p><span class="more">Learn more</span></a>' for u,n,d in services)

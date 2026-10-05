@@ -25,6 +25,37 @@ We help with the practical side of survey equipment: getting GPS and total stati
 
 We're family-owned and based in Mid-Michigan, serving contractors in Saginaw, Bay City, and Midland directly, with remote troubleshooting anywhere in Michigan. When your gear isn't cooperating on a Tuesday morning, you talk to us, not a support portal.
 
+
+## Common issues we solve
+
+- Base station and rover radio or cellular connection problems
+- Site calibration and localization that doesn't tie into control
+- Shots that don't match plan elevations or known control points
+- Getting design files loaded onto data collectors and machines
+- Coordinate system and project datum setup
+
+## How support works
+
+1. **Contact us with the problem.** Describe what the equipment is doing and send photos or screenshots if you can.
+2. **Remote troubleshooting first.** Many setup, file, and calibration issues can be worked through remotely.
+3. **On-site help when needed.** For Saginaw, Bay City, and Midland jobsites, we can come to the site.
+4. **Prevent it next time.** We explain what went wrong and set up a simple checklist so the crew can catch it early.
+
+## Training for your crew
+
+We train new operators and layout crews on the practical side of the equipment: setting up a base, checking into control, staking points, checking grade, and knowing when a number doesn't look right. Training is hands-on and built around your own gear and jobs.
+
+## Frequently asked questions
+
+### Do you sell or rent equipment?
+No. We focus on supporting the equipment you already own or rent, so our advice isn't tied to selling hardware.
+
+### Can you help set up a new GPS rover or base?
+Yes. We can help configure new equipment, set up project coordinate systems, and get the crew comfortable before it goes to the jobsite.
+
+### What should I check before contacting you?
+Confirm the base and rover are powered, check the radio or cellular connection, and note any error messages. Photos or screenshots of the screen help a lot.
+
 ## Don't lose a day to a setup problem
 
 Most survey equipment issues are fixable fast by someone who's seen them before. That's us.

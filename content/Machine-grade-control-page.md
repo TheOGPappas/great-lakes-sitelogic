@@ -25,6 +25,43 @@ We work with the file formats your machines run on and the grade control systems
 
 We're based in Mid-Michigan and serve contractors in Saginaw, Bay City, and Midland directly, with remote support anywhere else in Michigan. Family-owned, so when you reach out, you're talking to the people doing the work.
 
+
+## Who we work with
+
+- Site-work and excavation contractors running GPS dozers, excavators, and graders
+- Utility contractors who need trench, pipe, and structure models in the machine
+- Road and parking lot contractors working to tight subgrade and finished-grade tolerances
+- Contractors buying their first machine control system and need help getting it productive
+
+## How it works
+
+1. **Send the files.** Plans, CAD/DXF, LandXML, existing surfaces, and control points, whatever you have.
+2. **We review the design.** We check for missing data, bad elevations, and conflicts before anything is built.
+3. **We build the model.** Surfaces, linework, and alignments are prepared for your specific machines and grade control system.
+4. **Field check and handoff.** Files are delivered ready to load, with notes on control, localization, and anything the crew should know.
+5. **Revisions as the job moves.** When the engineer issues a change, we update the model and track which version is current.
+
+## What we deliver
+
+- Finished-grade, subgrade, and stripping surfaces
+- Alignments and linework for curbs, pads, ditches, and utilities
+- Files formatted for the grade control system your machines already run
+- A short handoff summary: control used, revision date, and known plan issues
+
+## Frequently asked questions
+
+### Which machine control systems do you support?
+We prepare models for the major grade control platforms Michigan contractors run. Tell us your system and software version and we'll deliver files in the format it expects.
+
+### Can you fix a model someone else built?
+Yes. Model review and cleanup is common work for us. If a surface won't load, has spikes, or doesn't match the plans, we'll find the problem and fix it.
+
+### How fast is turnaround?
+It depends on the size of the site and the quality of the plans, but we build schedules around your start date. Tell us when the machines need to move dirt.
+
+### Do you work outside the Tri-City area?
+Yes. We serve Saginaw, Bay City, and Midland directly, and most modeling and file support is delivered remotely anywhere in Michigan.
+
 ## Stop fighting your models
 
 Bad grade control data burns fuel, time, and rework. Get models built right the first time by people who understand construction.

@@ -59,3 +59,6 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);line-height:1.08;letter-spacing:-.03em;m
 .tagline{font-size:1.15rem;font-weight:700;color:var(--gold);margin:-6px 0 14px}
 .svc-body{max-width:900px}.svc-sec{margin-bottom:46px}.svc-sec h2{margin-bottom:12px}.svc-sec .checklist{margin-top:16px}
 .cta-band a:not(.button){color:inherit;text-decoration:underline}
+.steps{counter-reset:s;list-style:none;padding:0;margin:16px 0 0}.steps li{counter-increment:s;position:relative;padding:14px 16px 14px 62px;background:#fff;border:1px solid #e3e1da;margin-bottom:10px}.steps li:before{content:counter(s);position:absolute;left:16px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:800;display:flex;align-items:center;justify-content:center}
+.faq{background:#fff;border:1px solid #e3e1da;margin-bottom:10px;padding:0 18px}.faq summary{cursor:pointer;font-weight:800;padding:16px 0;color:var(--navy)}.faq p{margin:0 0 16px}
+.svc-sec a{color:var(--navy);text-decoration:underline}.cards.rel{grid-template-columns:repeat(4,1fr)}@media(max-width:900px){.cards.rel{grid-template-columns:1fr 1fr}}@media(max-width:560px){.cards.rel{grid-template-columns:1fr}}

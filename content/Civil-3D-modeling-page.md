@@ -25,6 +25,40 @@ A pretty corridor profile doesn't help a dozer operator. We build finished-grade
 
 Design engineers and dirt crews think about models differently. We sit between the two. Contractors across Saginaw, Bay City, and Midland use our models because they arrive ready to run, not as raw design files that need an hour of fixing before the first cut.
 
+
+## Common problems we fix
+
+- Surfaces with spikes, holes, or bad triangles from plotting-focused design models
+- Corridors that don't daylight correctly or have gaps at intersections and transitions
+- Missing subgrade surfaces when only finished grade was designed
+- Models that don't match the latest plan revision
+
+## Our modeling process
+
+1. **Plan and file review.** We look at plan sheets, CAD, and any engineer's model to see what's usable.
+2. **Build or rebuild the surfaces.** Finished grade, subgrade, and section-specific surfaces built for the machine, not the plot.
+3. **Quality check.** We check surfaces against plan spot elevations, profiles, and cross sections.
+4. **Export for the field.** Surfaces and linework exported in the formats your grade control and layout equipment need.
+5. **Revision tracking.** Each update is dated and labeled so the crew knows which model is current.
+
+## Inputs we can work from
+
+- Civil 3D drawings and engineer's design models
+- CAD/DXF linework and PDF plan sets
+- LandXML surfaces and alignments
+- Existing topo surveys and control point files
+
+## Frequently asked questions
+
+### Do you need the engineer's Civil 3D files?
+They help, but they aren't required. We can build grade-control surfaces from PDF plans and CAD linework when design models aren't available.
+
+### What's the difference between a design model and a grade-control model?
+A design model is built to produce plan sheets. A grade-control model is built so a machine can cut and fill to it accurately, with clean surfaces, correct subgrade depths, and no gaps.
+
+### Can you model just part of a job?
+Yes. Building pads, parking lots, ponds, roads, or utility runs can be modeled on their own when that's all you need.
+
 ## Get a model you can put in the cab
 
 If your operators are fighting surfaces or your models need cleanup before every job, that's what we do all day.
