@@ -23,7 +23,7 @@ We work with the file formats your machines run on and the grade control systems
 
 ## Local support, not a call center
 
-We're based in Mid-Michigan and serve contractors in Saginaw, Bay City, and Midland directly, with remote support anywhere else in Michigan. Family-owned, so when you reach out, you're talking to the people doing the work.
+We're based in Mid-Michigan and serve contractors in Saginaw, Bay City, and Midland directly, with in-person jobsite visits and remote support anywhere else in Michigan. Family-owned, so when you reach out, you're talking to the people doing the work.
 
 
 ## Who we work with
@@ -38,7 +38,7 @@ We're based in Mid-Michigan and serve contractors in Saginaw, Bay City, and Midl
 1. **Send the files.** Plans, CAD/DXF, LandXML, existing surfaces, and control points, whatever you have.
 2. **We review the design.** We check for missing data, bad elevations, and conflicts before anything is built.
 3. **We build the model.** Surfaces, linework, and alignments are prepared for your specific machines and grade control system.
-4. **Field check and handoff.** Files are delivered ready to load, with notes on control, localization, and anything the crew should know.
+4. **Field check and handoff.** Files are delivered ready to load, with notes on control, localization, and anything the crew should know. We can also meet your crew on site to load files and check into control.
 5. **Revisions as the job moves.** When the engineer issues a change, we update the model and track which version is current.
 
 ## What we deliver
@@ -60,7 +60,7 @@ Yes. Model review and cleanup is common work for us. If a surface won't load, ha
 It depends on the size of the site and the quality of the plans, but we build schedules around your start date. Tell us when the machines need to move dirt.
 
 ### Do you work outside the Tri-City area?
-Yes. We serve Saginaw, Bay City, and Midland directly, and most modeling and file support is delivered remotely anywhere in Michigan.
+Yes. We serve Saginaw, Bay City, and Midland directly, and we'll visit jobsites in person when the work calls for it. Modeling and file support can also be delivered remotely anywhere in Michigan.
 
 ## Stop fighting your models
 

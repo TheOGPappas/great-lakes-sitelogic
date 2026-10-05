@@ -23,7 +23,7 @@ We set up field mapping systems your crew will actually use: site feature collec
 
 ## Practical, not academic
 
-This isn't enterprise GIS consulting with a six-month timeline. We're a Mid-Michigan, family-owned shop that works with contractors in Saginaw, Bay City, and Midland, and we build mapping setups sized for real construction operations. Remote support available anywhere in Michigan.
+This isn't enterprise GIS consulting with a six-month timeline. We're a Mid-Michigan, family-owned shop that works with contractors in Saginaw, Bay City, and Midland, and we build mapping setups sized for real construction operations. We'll come to your site in person to set things up, with remote support available anywhere in Michigan.
 
 
 ## Common jobsite uses
@@ -43,7 +43,7 @@ This isn't enterprise GIS consulting with a six-month timeline. We're a Mid-Mich
 
 ## Powered by FieldSight
 
-Our field mapping work is built around FieldSight, our own browser-based field-mapping app for civil construction crews. It brings project files, GNSS positioning, and site observations into one map on a phone or tablet. [Learn more about FieldSight](/products).
+Our field mapping work is built around FieldSight, our own browser-based field-mapping app for civil construction crews. It brings project files, your device's built-in location, and site observations into one map on a phone or tablet. [Learn more about FieldSight](/products).
 
 ## Frequently asked questions
 
@@ -51,7 +51,7 @@ Our field mapping work is built around FieldSight, our own browser-based field-m
 No. Most crews can collect and view data in a browser on the phones and tablets they already carry. We set things up for the size of your operation.
 
 ### How accurate is the location data?
-Accuracy depends on the device. Phones give a general location, while connected GNSS receivers can deliver survey-grade positions. We'll help you match the equipment to the job.
+FieldSight currently uses the phone or tablet's built-in location, which is good for finding features and getting around the site but is not survey-grade. External GPS receiver support is on the roadmap. When a job needs survey-grade positions, we'll help you set up a workflow that uses your survey equipment alongside FieldSight.
 
 ### Can field data come back into CAD?
 Yes. Collected points and features can be exported to CSV, DXF, KML, and GeoJSON for use in CAD, GIS, and reporting.

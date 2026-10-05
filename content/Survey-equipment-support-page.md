@@ -23,7 +23,7 @@ We help with the practical side of survey equipment: getting GPS and total stati
 
 ## Local, responsive help
 
-We're family-owned and based in Mid-Michigan, serving contractors in Saginaw, Bay City, and Midland directly, with remote troubleshooting anywhere in Michigan. When your gear isn't cooperating on a Tuesday morning, you talk to us, not a support portal.
+We're family-owned and based in Mid-Michigan, serving contractors in Saginaw, Bay City, and Midland directly, with in-person jobsite visits and remote troubleshooting anywhere in Michigan. When your gear isn't cooperating on a Tuesday morning, you talk to us, not a support portal.
 
 
 ## Common issues we solve
@@ -38,7 +38,7 @@ We're family-owned and based in Mid-Michigan, serving contractors in Saginaw, Ba
 
 1. **Contact us with the problem.** Describe what the equipment is doing and send photos or screenshots if you can.
 2. **Remote troubleshooting first.** Many setup, file, and calibration issues can be worked through remotely.
-3. **On-site help when needed.** For Saginaw, Bay City, and Midland jobsites, we can come to the site.
+3. **On-site visits.** When a problem needs hands on the equipment, we'll come to your jobsite in person.
 4. **Prevent it next time.** We explain what went wrong and set up a simple checklist so the crew can catch it early.
 
 ## Training for your crew
@@ -48,7 +48,7 @@ We train new operators and layout crews on the practical side of the equipment: 
 ## Frequently asked questions
 
 ### Do you sell or rent equipment?
-No. We focus on supporting the equipment you already own or rent, so our advice isn't tied to selling hardware.
+No. We don't sell or rent equipment. We provide support and troubleshooting for the gear you already have, so our advice isn't tied to selling hardware.
 
 ### Can you help set up a new GPS rover or base?
 Yes. We can help configure new equipment, set up project coordinate systems, and get the crew comfortable before it goes to the jobsite.
