@@ -124,10 +124,10 @@ for f,src,slugv,name in raw:
     pages[slugv+".html"]=("/svc:"+slugv,mt,html.escape(md),out)
     services.append((slugv,name,intro[0]))
 cards="".join(f'<a class="card" href="/{u}"><h3>{html.escape(n)}</h3><p>{html.escape(re.split(r"(?<=\.) ",d)[0])}</p><span class="more">Learn more</span></a>' for u,n,d in services)
-svc=f'''    <section class="page-hero"><div class="container"><span class="eyebrow">Services</span><h1>Civil construction technology <span>services in Mid-Michigan.</span></h1><p>Takeoffs, Civil 3D modeling, machine grade control, survey equipment support, and field mapping for contractors in Saginaw, Bay City, Midland, and statewide.</p></div></section>
+svc=f'''    <section class="page-hero"><div class="container"><span class="eyebrow">Services</span><h1>Civil construction technology <span>services in Mid-Michigan.</span></h1><p>Takeoffs, Civil 3D modeling, machine grade control, survey equipment support, field mapping, site technology consulting, GNSS and crew development, construction advisement, project management, design consulting, and pre-construction consulting for contractors in Saginaw, Bay City, Midland, and statewide.</p></div></section>
     <section><div class="container"><div class="cards">{cards}</div></div></section>
 {CTA}'''
-pages["services.html"]=("/services","Services | Great Lakes SiteLogic","Blueprint takeoff, Civil 3D grade-control modeling, machine grade control, survey equipment support, and field mapping &amp; GIS for Michigan contractors.",svc)
+pages["services.html"]=("/services","Services | Great Lakes SiteLogic","Blueprint takeoff, Civil 3D grade-control modeling, machine grade control, survey equipment support, field mapping &amp; GIS, site technology consulting, GNSS training, construction advisement, project management, design consulting, and pre-construction consulting for Michigan contractors.",svc)
 for f,(slug,t,d,b) in pages.items(): open(f,"w").write(page(slug,t,d,b))
 print("built",list(pages))
 
