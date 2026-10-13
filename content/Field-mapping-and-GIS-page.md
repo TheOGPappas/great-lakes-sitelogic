@@ -51,7 +51,7 @@ Our field mapping work is built around FieldSight, our own browser-based field-m
 No. Most crews can collect and view data in a browser on the phones and tablets they already carry. We set things up for the size of your operation.
 
 ### How accurate is the location data?
-FieldSight currently uses the phone or tablet's built-in location, which is good for finding features and getting around the site but is not survey-grade. External GPS receiver support is on the roadmap. When a job needs survey-grade positions, we'll help you set up a workflow that uses your survey equipment alongside FieldSight.
+The phone or tablet's built-in GPS is good for finding features and navigating the site. For survey-grade positions, FieldSight pairs with Bluetooth GNSS receivers (Emlid, Bad Elf, Ardusimple) and USB receivers (Trimble), with NTRIP RTK corrections and a live fix-quality readout on screen.
 
 ### Can field data come back into CAD?
 Yes. Collected points and features can be exported to CSV, DXF, KML, and GeoJSON for use in CAD, GIS, and reporting.
