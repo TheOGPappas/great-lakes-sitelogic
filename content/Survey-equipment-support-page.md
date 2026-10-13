@@ -2,7 +2,7 @@
 
 **Suggested URL slug:** `/survey-equipment-support-michigan`
 **Meta title:** Survey Equipment Support Michigan | Great Lakes SiteLogic
-**Meta description:** Survey equipment support for Michigan contractors: GPS, total stations, and grade control troubleshooting. Email info@greatlakessitelogic.com.
+**Meta description:** Survey equipment support for Michigan contractors: GPS and grade control troubleshooting. Email info@greatlakessitelogic.com.
 
 ---
 
@@ -12,11 +12,11 @@ Survey gear is only useful when it's working and your crew knows how to run it. 
 
 ## Keep your crew running
 
-We help with the practical side of survey equipment: getting GPS and total station setups working, troubleshooting when shots don't tie, and getting new crew members up to speed on the gear. You don't need a survey department, you need someone who answers when the equipment acts up.
+We help with the practical side of survey equipment: getting GPS setups working, troubleshooting when shots don't tie, and getting new crew members up to speed on the gear. You don't need a survey department, you need someone who answers when the equipment acts up.
 
 ## What we support
 
-- GPS and total station setup and troubleshooting
+- GPS setup and troubleshooting
 - Base station and rover configuration issues
 - Help getting new operators trained on survey equipment
 - Workflow support connecting survey data to your grade control models
