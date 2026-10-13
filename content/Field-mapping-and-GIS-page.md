@@ -56,6 +56,9 @@ The phone or tablet's built-in GPS is good for finding features and navigating t
 ### Can field data come back into CAD?
 Yes. Collected points and features can be exported to CSV, DXF, KML, and GeoJSON for use in CAD, GIS, and reporting.
 
+### Can we edit elevations on collected data?
+Yes. FieldSight's Edit tool lets you set or clear the elevation on any point, or edit per-vertex elevations on lines and utility runs. Elevations carry through to KML, GPX, DXF, and CSV exports.
+
 ## Know what's actually out there
 
 If your as-builts are guesses and your field data lives in three different places, we can fix that.
