@@ -25,7 +25,7 @@ Got a development idea, a parcel you're eyeing, or a project in the early stages
 
 ## Ideas meet reality
 
-Early-stage advice is only valuable if it's honest. We tell you what the site is really going to take — not what you want to hear. Our input comes from {{yrs:1990}} combined years of takeoff, modeling, machine control, and field work, so our early numbers hold up when the job starts.
+Early-stage advice is only valuable if it's honest. We tell you what the site is really going to take — not what you want to hear. Our input comes from {{yrscombined:2010,2006}} combined years of takeoff, modeling, machine control, and field work, so our early numbers hold up when the job starts.
 
 ## Frequently asked questions
 

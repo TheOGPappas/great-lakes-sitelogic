@@ -24,7 +24,7 @@ Plans and specs tell you what to build. They don't always tell you the best way 
 
 ## Judgment you can't download
 
-Our advisement comes from {{yrs:1990}} combined years across takeoff, civil consulting, grade-control modeling, machine control, and survey — {{yrs:2010}} of them firsthand in the field. We've seen what works, what fails, and what the plans missed. That experience is what you're buying.
+Our advisement comes from {{yrscombined:2010,2006}} combined years across takeoff, civil consulting, grade-control modeling, machine control, and survey — {{yrs:2010}} of them firsthand in the field. We've seen what works, what fails, and what the plans missed. That experience is what you're buying.
 
 ## Frequently asked questions
 
