@@ -69,3 +69,12 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);line-height:1.08;letter-spacing:-.03em;m
 .shot b{display:block;color:var(--navy);margin-bottom:6px;font-size:.95rem}
 .shot p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.5}
 @media(max-width:800px){.shots{grid-template-columns:1fr}}
+/* FieldSight homepage strip + pricing cards */
+.fs-strip{background:var(--navy);color:#fff;padding:64px 0}
+.fs-strip-in{display:flex;justify-content:space-between;align-items:center;gap:34px;flex-wrap:wrap}
+.fs-strip h2{color:#fff;margin:14px 0 10px}
+.fs-strip p{color:#d4deea;max-width:700px;margin:0;font-size:1.05rem}
+.fs-strip p strong{color:#fff}
+.price{font-size:2rem;font-weight:900;color:var(--navy);margin:2px 0 8px}
+.price span{font-size:.85rem;font-weight:650;color:var(--muted)}
+@media(max-width:800px){.fs-strip{padding:52px 0}}
