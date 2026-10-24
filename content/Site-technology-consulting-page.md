@@ -24,7 +24,7 @@ We start with what you're trying to accomplish, not with a product catalog. Whet
 
 ## Built from the dirt up
 
-Our advice comes from 16 years of boots-in-the-dirt experience, not a sales deck. We've run the equipment, managed the work, and built the models — so we know which technology survives contact with a real jobsite and which doesn't.
+Our advice comes from {{yrs:2010}} years of boots-in-the-dirt experience, not a sales deck. We've run the equipment, managed the work, and built the models — so we know which technology survives contact with a real jobsite and which doesn't.
 
 ## Frequently asked questions
 

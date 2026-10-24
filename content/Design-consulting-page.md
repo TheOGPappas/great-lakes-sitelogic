@@ -12,7 +12,7 @@ Good designs get built faster, cheaper, and with fewer headaches. Great Lakes Si
 
 ## Designed to be built
 
-Too many designs look clean on paper and fight you in the field. We consult on the practical side of civil design: grading that drains, layouts a crew can actually stake, details that don't require a miracle to construct. Our input comes from 16 years of boots-in-the-dirt experience plus deep Civil 3D modeling expertise.
+Too many designs look clean on paper and fight you in the field. We consult on the practical side of civil design: grading that drains, layouts a crew can actually stake, details that don't require a miracle to construct. Our input comes from {{yrs:2010}} years of boots-in-the-dirt experience plus deep Civil 3D modeling expertise.
 
 ## What we consult on
 
