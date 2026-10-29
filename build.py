@@ -1,6 +1,6 @@
 # Generates the site pages from shared header/footer. Run: python3 build.py
 import re
-EMAIL="info@greatlakessitelogic.com"; PHONE_T="+19897802592"; PHONE="(989) 780-2592"
+EMAIL="info@greatlakessitelogic.com"; PHONE_T="+19897800149"; PHONE="(989) 780-0149"
 QUOTE=f"mailto:{EMAIL}?subject=Great%20Lakes%20SiteLogic%20Quote%20Request"
 NAV=[("/","Home"),("/services","Services"),("/about","About"),("/products","Products")]
 import json,glob,html,datetime
