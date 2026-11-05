@@ -43,7 +43,7 @@ This isn't enterprise GIS consulting with a six-month timeline. We're a Mid-Mich
 
 ## Powered by FieldSight
 
-Our field mapping work is built around FieldSight, our own browser-based field-mapping app for civil construction crews. It brings project files, your device's built-in location, and site observations into one map on a phone or tablet — and crews can trace street features (right-of-way lines, curbs, sidewalks, crosswalks, driveways, medians) over satellite imagery and export a to-scale CAD basemap (DXF) in state plane feet. The same app marks erosion-control measures with a condition stamp on each one, and tallies trees for clearing in DOT standard size classes — counts saved into the job record, not a notebook. [Learn more about FieldSight](/products).
+Our field mapping work is built around FieldSight, our own browser-based field-mapping app for civil construction crews. It brings project files, your device's built-in location, and site observations into one map on a phone or tablet — and crews can trace street features (right-of-way lines, curbs, sidewalks, crosswalks, driveways, medians) over satellite imagery and export a to-scale CAD basemap (DXF) in state plane feet. The same app marks erosion-control measures with a condition stamp on each one, and tallies trees for clearing by size class — counts saved into the job record, not a notebook. Its Reference tab doubles as a built-in field book: standard material lists, pipe inside/outside diameter tables, a feet-and-inches converter, and calculators for yardage, hauling weights, and coverage. [Learn more about FieldSight](/products).
 
 ## Frequently asked questions
 
