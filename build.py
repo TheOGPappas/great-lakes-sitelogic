@@ -22,6 +22,9 @@ def _yrs_span(t):
 def page(slug,title,desc,body):
     desc_html=_yrs_plain(desc)
     desc_tpl=f' data-desc-template="{html.escape(desc,quote=True)}"' if "{{yrs" in desc else ""
+    cpath=slug[5:] if slug.startswith("/svc:") else slug
+    if not cpath.startswith("/"): cpath="/"+cpath
+    canon="https://greatlakessitelogic.com"+cpath
     links="".join(f'<a href="{h}"{" class=\"active\"" if h==slug else ""}>{t}</a>' for h,t in NAV)
     cta_cls="button active" if slug=="/contact" else "button"
     return f'''<!doctype html>
@@ -30,6 +33,7 @@ def page(slug,title,desc,body):
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="{desc_html}"{desc_tpl} />
+  <link rel="canonical" href="{canon}" />
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <meta property="og:title" content="{title}" />
